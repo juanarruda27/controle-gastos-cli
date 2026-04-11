@@ -23,6 +23,5 @@ Pessoas que desejam ter um controle básico de suas finanças pessoais.
 - GitHub Actions (CI)
 
 ## 📦 Instalação
-'''bash
 git clone https://github.com/juanarruda-27/controle-gastos-cli.git
 cd controle-gastos-cli
