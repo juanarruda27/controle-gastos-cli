@@ -24,4 +24,5 @@ Pessoas que desejam ter um controle básico de suas finanças pessoais.
 
 ## 📦 Instalação
 git clone https://github.com/juanarruda27/controle-gastos-cli.git
+Logo após: 
 cd controle-gastos-cli
