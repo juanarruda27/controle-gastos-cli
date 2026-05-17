@@ -1,5 +1,6 @@
 import json
 import os
+from src.cotacao import obter_cotacao_dolar
 
 FILE_NAME = "gastos.json"
 
@@ -42,6 +43,15 @@ def remover_gasto(indice):
     gastos.pop(indice)
     salvar_gastos(gastos)
 
+def converter_para_dolar(total):
+    cotacao = obter_cotacao_dolar()
+
+    valor_dolar = total / cotacao
+
+    print(f"Total em BRL: R$ {total:.2f}")
+    print(f"Cotação atual: {cotacao}")
+    print(f"Total em USD: $ {valor_dolar:.2f}")
+
 
 def menu():
     while True:
@@ -50,9 +60,10 @@ def menu():
         print("2. Listar gastos")
         print("3. Mostrar total")
         print("4. Remover gasto")
-        print("5. Sair")
+        print("5. Converter total para dólar")
+        print("6. Sair")
 
-        opcao = input("Escolha: ")
+        opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
             nome = input("Nome do gasto: ")
@@ -72,8 +83,13 @@ def menu():
             indice = int(input("Índice do gasto: "))
             remover_gasto(indice)
             print("Gasto removido!")
-
+        
         elif opcao == "5":
+            total = total_gastos()
+            cotacao = obter_cotacao_dolar()
+            print(f"Total em dólar: US$ {total / cotacao:.2f}")
+
+        elif opcao == "6":
             break
 
         else:
