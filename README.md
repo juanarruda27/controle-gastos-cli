@@ -33,6 +33,7 @@ python src/app.py
 
 python -m unittest discover -s tests
 
-## Repositório
+## Instalação
 
+Git clone
 https://github.com/juanarruda27/controle-gastos-cli
