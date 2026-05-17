@@ -1,28 +1,38 @@
-# 💰 Controle de Gastos CLI
+# Controle de Gastos CLI
 
-## 📌 Descrição do Problema
-Muitas pessoas não possuem controle adequado sobre seus gastos diários, o que dificulta a organização financeira e pode levar a dívidas ou uso ineficiente do dinheiro.
+Aplicação CLI desenvolvida em Python para gerenciamento de gastos pessoais.
 
-## 💡 Solução Proposta
-Esta aplicação em linha de comando (CLI) permite ao usuário registrar, visualizar e gerenciar seus gastos de forma simples e prática.
+## Funcionalidades
 
-## 👥 Público-alvo
-Pessoas que desejam ter um controle básico de suas finanças pessoais.
-
-## ⚙️ Funcionalidades
-- Adicionar gasto
+- Adicionar gastos
 - Listar gastos
-- Calcular total de gastos
-- Remover gasto
+- Calcular total
+- Remover gastos
+- Converter total para dólar utilizando API pública
 
-## 🛠️ Tecnologias Utilizadas
+## API utilizada
+
+AwesomeAPI - Cotação de moedas:
+https://docs.awesomeapi.com.br/api-de-moedas
+
+## Tecnologias
+
 - Python
-- JSON (armazenamento local)
-- unittest (testes automatizados)
-- Ruff (lint)
-- GitHub Actions (CI)
+- JSON
+- Unittest
+- Ruff
+- GitHub Actions
+- Requests
 
-## 📦 Instalação
-Primeiro: git clone https://github.com/juanarruda27/controle-gastos-cli.git
+## Executar projeto
 
-Segundo: cd controle-gastos-cli
+pip install -r requirements.txt
+python src/app.py
+
+## Executar testes
+
+python -m unittest discover -s tests
+
+## Repositório
+
+https://github.com/juanarruda27/controle-gastos-cli
