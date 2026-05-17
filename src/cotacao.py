@@ -8,6 +8,9 @@ def obter_cotacao_dolar():
 
     dados = resposta.json()
 
+    if "USDBRL" not in dados:
+        raise Exception("Erro ao obter cotação da API")
+
     cotacao = float(dados["USDBRL"]["bid"])
 
     return cotacao
